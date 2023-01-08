@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"> </script>
+
+  </head>
+  <body>
+      
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" style="margin-top:50px">
+                <!-- <button type="submit" class="btn btn-success"  id="promiseevent">Click me Promise Event</button> -->  <!--1st line script code check via id and code-->
+                <!-- <input type="text"  id="txt"> -->   <!--for second script  line code{check from id}-->
+
+
+                <!-- 3rd script tag code -->
+                <!--
+                
+                    
+                    <input type="text" id="num1" placeholder="Enter first number">
+                <input type="text" id="num2" placeholder="Enter second number">
+                <button type="submit" class="btn btn-warning" id="calculate">Calculate</button>
+                
+
+                <h2 id="result" style="font-weight: bold;">Result::<span id="sp" style="color:red"></span></h2> -->
+
+                
+            </div>
+        </div>
+    </div>
+
+    <!--1st script Code-->
+
+    <!-- <script>    
+        
+        
+       $(document).on('click','#promiseevent', function() {     //executed
+                // e.preventDefault();
+              var a = "hello";
+                check(a);
+            });
+     
+function check(z="")
+{
+    let proobj = new Promise(function(resolve, reject) {
+         
+           
+            if(z==="hello")
+            {
+                resolve('Hello Boss You Clicked on Button');
+            }
+            else 
+            {
+                reject('sorry you not click any button');
+            }
+        })
+
+
+        proobj.then(function(msg) {
+            console.log(msg);value=""
+            // alert(msg);
+        }).catch(function(err) {
+            console.log(err);
+        })
+}
+
+check();
+
+    </script> -->
+
+
+
+
+    <!--Second Script code-->
+
+    <!-- <script>
+       $(document).on('click', '#promiseevent', function(e) {               //executed code
+        e.preventDefault();
+        var nm = $('#txt').val();
+        // alert(nm);
+        procheck(nm);
+       }) 
+
+
+       function procheck(z='')
+       {
+        let promise = new Promise(function(resolve, reject) {
+            if(typeof z== 'string' && z.length!=0)
+            {
+                resolve(`hello this is input field string value: ${z}`);
+            }
+            else 
+            {
+                reject(`input field value is given number OR value is empty string`);
+            }
+        })
+
+        promise.then(function(msg) {
+            alert(msg);
+        }).catch(function(error) {
+            alert(error);
+        })  
+
+       }
+
+    //    procheck();
+    </script> -->
+
+
+
+    <!--Third Script Code-->
+
+    <!-- code using 'arrow function'-->
+
+    <!-- <script>
+        $(document).ready(function() {
+            $(document).on('click', '#calculate', function () { 
+                var num1 = $('#num1').val();
+                var num2 = $('#num2').val();
+                // alert(typeof num1);
+                // alert(num2);
+                var result = num1*num2;
+
+                // alert(result.length);
+                // return
+              
+            //     alert(typeof result);
+            //    return
+                // alert(result);
+                // return
+                calculate(result);
+                
+             })
+            })
+
+
+            function calculate(cal="")
+            {
+            // console.log(cal);
+                var calpromise = new Promise( (resolved, rejected) => {
+                    if(!isNaN(cal) && cal != '')
+                    {
+                        resolved(`Multiplication of two number is: ${cal}`);
+                    }
+                    else
+                    {
+                        rejected(`Entered value is string/empty string: ${num1}, ${num2}`);
+                    }
+                })
+
+
+
+                calpromise.then( (msg) => {
+                    // console.log(msg);
+                    // document.getElementById('sp').style.color='green';  //for give color
+                    document.getElementById('sp').append(msg);
+                    // var result = `<h2 style="color:red;font-weight:bold">Result::</h2>`; // is a string 
+                    // document.body.appendChild(z);
+                }).catch( (error) => {
+                    document.getElementById('sp').append(error);
+                    // console.log(error);
+                    // return
+                    // document.getElementById('#result').innerHTML= error;
+                })
+            }
+
+    </script> -->
+    
+
+
+
+   
+  </body>
+</html>

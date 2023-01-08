@@ -1,0 +1,221 @@
+
+
+in goldgym 
+
+1a. http://194.180.176.245/goldgym/gold-gym/public/api/user-steps-leaderboard?end_date=2022-10-18&start_date=2022-10-17
+
+a. when i click on activity then hit above api 
+
+1b. http://194.180.176.245/goldgym/gold-gym/public/api/updateUserInfo
+a. when i update/edit my profile data
+
+1c. http://194.180.176.245/goldgym/gold-gym/public/api/activeGymSubscriptionHistory 
+a. when i go profile and click on subscription and see gym (subscription history)then hit that api
+
+1d.  http://194.180.176.245/goldgym/gold-gym/public/api/activeStudioSubscriptionHistory 
+a. when i go profile and click on subscription and studio (subscription history) then hit that api
+
+1e. http://194.180.176.245/goldgym/gold-gym/public/api/getActiveTrainerPkgSubsHistory
+a. when i go profile and click on subscription and trainer (subscription history) then hit that api
+
+1f.  http://194.180.176.245/goldgym/gold-gym/public/api/expiredGymSubscriptionHistory
+a. when i go profile and click on subcription and there show a history icon(it's show transaction history) and i click there then hit api 
+b. then Gym subscription transaction history that is expired
+
+1g. http://194.180.176.245/goldgym/gold-gym/public/api/expiredStudioSubscriptionHistory
+a. when i go profile and click on subcription and there show a history icon(it's show transaction history) and i click there then hit api 
+b. then Studio subscription transaction history that is expired
+
+1h. http://194.180.176.245/goldgym/gold-gym/public/api/getExpiredTrainerPkgSubsHistory?page=1
+a. when i go profile and click on subcription and there show a history icon(it's show transaction history) and i click there then hit api 
+b. then Trainer Package subscription transaction history that is expired
+
+1i. http://194.180.176.245/goldgym/gold-gym/public/api/getUserWeightHistory/1/2022-10-18
+a. when i go profile and click on weight log and it's show week,month,year
+
+1j. http://194.180.176.245/goldgym/gold-gym/public/api/storeUserWeight
+a. when i go profile and click on weight log and in week page it's show a plus(+) icon that use for update weight the i update the weight then this api hit
+
+1k. http://194.180.176.245/goldgym/gold-gym/public/api/get-travelpass?page=1
+a. when i go profile and click on travel pass then this api hit 
+
+1l.  http://194.180.176.245/goldgym/gold-gym/public/api/getFavourites/1
+a. when i go profile and click on favoirate option and it's show it's show 3 pages gym(1st page),classes(0),pt(2) 
+
+1m. http://194.180.176.245/goldgym/gold-gym/public/api/getGymSessionHistory?date=2022-10-18&page=1&type=0 
+a. when i go profile and click on GymslotBooking History then hit api and filter is none(type = 0)
+b. when i go profile and click on GymslotBooking History then hit api and filter is last week(type = 1)
+c. when i go profile and click on GymslotBooking History then hit api and filter is last month(type = 2)
+d. when i go profile and click on GymslotBooking History then hit api and filter is last year(type = 3)
+
+1n. http://194.180.176.245/goldgym/gold-gym/public/api/userEventCount
+1n1. http://194.180.176.245/goldgym/gold-gym/public/api/getCatalogs
+a. when go profile and click on golds wallet then hit api and here 3 page show catalog,points,history 
+b. when i catolog then this api hit
+
+1n2. http://194.180.176.245/goldgym/gold-gym/public/api/getPointsCatalogue/1
+a. when i click on points option then hit api 
+
+1n3. http://194.180.176.245/goldgym/gold-gym/public/api/EventCatalogHistory
+a. when i click on history option then hit api 
+
+
+1o.
+  http://194.180.176.245/goldgym/gold-gym/public/api/viewMoreClasses?page=1&type=1
+a. when i click on upcomingClasses then hit api there two page show gym and studio
+b. when i am on gym page then hit api for gym type=1
+http://194.180.176.245/goldgym/gold-gym/public/api/viewMoreClasses?page=1&type=0
+a.when i go on studio page then hit that api for studio type=0
+
+2a. http://194.180.176.245/goldgym/gold-gym/public/api/v3/getDashboardMoreVideo
+a. when i click on workout more videos then hit api that
+
+
+
+
+
+
+1. When i open the goldgym app then some data autoload and display on screen 
+Note: then api hit (that api hit auto when loading app)
+//all of this a to k hit from get method
+a. http://194.180.176.245/goldgym/gold-gym/public/api/userEventCount
+b. http://194.180.176.245/goldgym/gold-gym/public/api/unreadNotificationCount(return notification read or not)(it's hit two time)
+c. http://194.180.176.245/goldgym/gold-gym/public/api/attendence-detail(it returns attendace data)
+d. http://194.180.176.245/goldgym/gold-gym/public/api/getUserActivePackageDetail
+e. http://194.180.176.245/goldgym/gold-gym/public/api/getBannerImages(it return some data and which userlogin details and bannerimage)
+f. http://194.180.176.245/goldgym/gold-gym/public/api/get-articles-category
+g. http://194.180.176.245/goldgym/gold-gym/public/api/getTrainerBookingOption
+h. http://194.180.176.245/goldgym/gold-gym/public/api/getSponseredAdImages
+i. http://194.180.176.245/goldgym/gold-gym/public/api/getDashboardVideo
+j. http://194.180.176.245/goldgym/gold-gym/public/api/upcomingClasses
+k. http://194.180.176.245/goldgym/gold-gym/public/api/feedback-popup
+
+2. after clicking of buynow or when i search for gym center/studio center it hit Api
+a. http://194.180.176.245/goldgym/gold-gym/public/api/getCenter(2 times) hit (return center detail accrding address)//it use mst_user(usermodel) and relationship
+
+3. when i select a gym center then hit api
+a.http://194.180.176.245/goldgym/gold-gym/public/api/getStaticContent (it return some static data and term and condition)
+b. http://194.180.176.245/goldgym/gold-gym/public/api/getCenterDetails/1145/1(centerid/centertypeortype)(after select center it show center details)
+c. http://194.180.176.245/goldgym/gold-gym/public/api/getUserStories
+
+4. when i book session(booknow)(after selecting date) for gymbooking then hit api 
+a. http://194.180.176.245/goldgym/gold-gym/public/api/bookedGymTrialSlot
+note: when i feel date after that it take input  {"center_id":1145,"date":"28/10/2022","package_id":0,"book_free_trial":0}(which center id select)
+
+5. when i cancel the free booking slot then hit api
+a. http://194.180.176.245/goldgym/gold-gym/public/api/cancelBookedClass/620(id->that id is from upcomming classes)
+note:when user book the slot upcomming classes id(data) will create and after cancelation upcomming classes data will be delete
+b. http://194.180.176.245/goldgym/gold-gym/public/api/upcomingClasses(it also hit when user cancle the booking)
+
+6. when i go profile and click subscription then hit Api 
+a.http://194.180.176.245/goldgym/gold-gym/public/api/activeGymSubscriptionHistory(it will return all subscription data(trialbooking/purchase booking))
+
+7. when i go profile and click gym slot booking history then hit api 
+a.http://194.180.176.245/goldgym/gold-gym/public/api/getGymSessionHistory?date=2022-10-14&page=1&type=0
+
+8. when i click on workout video more then hit api 
+a. http://194.180.176.245/goldgym/gold-gym/public/api/v3/getDashboardMoreVideo
+
+9. when i click on view attendace then hit api
+a.  http://194.180.176.245/goldgym/gold-gym/public/api/getAttendanceHistory/2022/10(year/month)
+
+10, when i click on buy and goto studio then hit api 
+a.http://194.180.176.245/goldgym/gold-gym/public/api/getStudioList(it show all studio list according address and logitude and latitude)
+
+11. when i select a studio for further process then hit api 
+a. http://194.180.176.245/goldgym/gold-gym/public/api/getStudioDetails/1044(studioid)(return studiodetails)
+
+12. after select studio i click book free trial option then hit api 
+a. http://194.180.176.245/goldgym/gold-gym/public/api/getStudioCategories?studio_id=1044(click on book free trial)
+
+13.when i click in studio option buy and it show the categories i  then hit api  (Main this is)
+a. http://194.180.176.245/goldgym/gold-gym/public/api/getStudioCategories?studio_id=1044
+
+14. when i go studio option and select studio  and click bookfree trial/buy option then hit api 
+a. http://194.180.176.245/goldgym/gold-gym/public/api/getStudioCategories?studio_id=1032 
+
+15. after click free trial book it's show categories and i select a category (2city/6 pack) after selection it's show classes and i click on a class then hit api
+a.http://194.180.176.245/goldgym/gold-gym/public/api/getStudioClasses?category_id=29&studio_id=1032(click on in 2 city)
+b. http://194.180.176.245/goldgym/gold-gym/public/api/getStudioClasses?category_id=24&studio_id=1032(click on 6 pack)
+
+
+16. when i select a category and it's show  studio package/not then hit api (main 2 for studio)
+a. http://194.180.176.245/goldgym/gold-gym/public/api/getStudioPackage?category_id=28
+
+
+17. when i click on logout then hit api 
+a. URL: http://194.180.176.245/goldgym/gold-gym/public/api/logout
+
+18. when i login in golggym then hit api 
+a.http://194.180.176.245/goldgym/gold-gym/public/api/login(it take in input phone and generate a otp)
+
+19. when i feel otp then it hit api 
+a.http://194.180.176.245/goldgym/gold-gym/public/api/confirmOtp
+
+20. when i click on activity then hit api 
+a. http://194.180.176.245/goldgym/gold-gym/public/api/user-steps-leaderboard?end_date=2022-10-14&start_date=2022-10-13
+
+21. when go in activity on weekly option then hit api 
+a. URL: http://194.180.176.245/goldgym/gold-gym/public/api/user-steps-leaderboard?end_date=2022-10-14&start_date=2022-10-07
+
+22. when i go in activity on monthly option then hit api
+a. http://194.180.176.245/goldgym/gold-gym/public/api/user-steps-leaderboard?end_date=2022-10-14&start_date=2022-10-01
+
+23. when i select the gym center then  api hit 
+a.http://194.180.176.245/goldgym/gold-gym/public/api/storeUserInfo
+
+24. after selection gym_center when i click buy and select package then hit api
+a.http://194.180.176.245/goldgym/gold-gym/public/api/gymPackages/1145/1/0/0(gym_id/is_paid/show_package/is_renewable?)
+
+//read
+
+//when i click on book your personal trainer at your home 
+
+25. when i select studio_center and after click buy now i select a package and click on promocode then hit api
+a. http://194.180.176.245/goldgym/gold-gym/public/api/getcouponlist?category_id=29
+
+26. when click on one promocode from multiple then hit api 
+a. http://194.180.176.245/goldgym/gold-gym/public/api/applycoupon
+
+27. when i click on your personal Trainer at Your Home then hit api
+a.http://194.180.176.245/goldgym/gold-gym/public/api/getCov19TrainerBookDecl
+
+28.when i select a option from health goal then hit api
+a.http://194.180.176.245/goldgym/gold-gym/public/api/getHealthGoalList
+
+29. when i select helth goal and click on free session/one day session then hit api and choose a slot for specific date
+a.http://194.180.176.245/goldgym/gold-gym/public/api/getGymTrainerFreeAndOneDaySlots?date=2022-10-15&day=6&slot_type=0
+
+30. when i click multiple session and it show trainer/no trainer availabl then hit api
+a.http://194.180.176.245/goldgym/gold-gym/public/api/getGymTrainerList?page=1
+
+31.when i select helth goal and click on free session/onedaysession/multiple session and fill date and select time and click on book now then it hit api for take in input address(or new address)
+a. http://194.180.176.245/goldgym/gold-gym/public/api/getUserAddress
+
+32. when i fill the address and then click submit/booknow then hit api 
+a. http://194.180.176.245/goldgym/gold-gym/public/api/storeUserAddress
+
+33. when i select helth goal and click on one day session and select date 
+a.
+
+
+34. when i select helth goal and click on multiple session and it show multiple trainer then i click on one trainer details and after select date and click book then show the package then hit api 
+a. http://194.180.176.245/goldgym/gold-gym/public/api/getGymTrainerPackages?gym_id=1204 
+
+35. after (34) when i choose trainer and then open book a slot on for specific date then hit api
+a.  http://194.180.176.245/goldgym/gold-gym/public/api/getGymTrainerSlots?date=2022-10-15&day=6&trainer_id=1245
+
+36. when i click upcomming booking then hit api 
+a. http://194.180.176.245/goldgym/gold-gym/public/api/viewMoreClasses?page=1&type=0 
+
+37. when i book already a slot and again i try to book the slot then hit api 
+a.http://194.180.176.245/goldgym/gold-gym/public/api/bookedTrainerFreeAndOneDaySlot 
+
+38. when i book a slot speficific day then i click on book now and after show the package i select package  but trainer/slot is not available then hit api
+a. http://194.180.176.245/goldgym/gold-gym/public/api/checkTrainerAvailability?date=2022-10-21&gym_id=1204&package_id=166&slot_id=167&slot_type=0&trainer_id=1239
+
+39. when i click on resend otp then hit api 
+a. http://194.180.176.245/goldgym/gold-gym/public/api/resendOtp
+
+40. after 15 point condition means(when i click boofreetrial and select category and select a class then book a slot for studio) then hit api
+a. http://194.180.176.245/goldgym/gold-gym/public/api/getstudioslotforbooking?class_id=30&day=1&studio_id=1045&timestamp=1666004756

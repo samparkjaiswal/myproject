@@ -1,0 +1,197 @@
+table used by model and relationship
+
+
+1. http://194.180.176.245/goldgym/gold-gym/public/api/userEventCount
+a. this api used mst_user table for get total_points 
+
+2. http://194.180.176.245/goldgym/gold-gym/public/api/unreadNotificationCount
+a. it's use mst_user from login credential 
+b. it's use relationship function (notification) from User Model 
+c. in notification function relationship from "Notification Model" for get data
+d. it's use notification table for fetch data
+
+3. http://194.180.176.245/goldgym/gold-gym/public/api/attendence-detail
+a. it's use attandences table (Attandence Model)
+b. here a relatioship function(Center) call In Attendace Model that alos get the the data
+
+4.  http://194.180.176.245/goldgym/gold-gym/public/api/getUserActivePackageDetail
+a. it's use mst_user model for relationship 
+b. via relation function (getUserCurrentActivePackage) in User Model it' fetch data from Purchase_packages table
+c. in user model getusercurrentactivepackage  is also use a relation function(allPurchasePackages) in User Model alos
+d. via relatioship from Purchase_Packages table will come
+
+5. http://194.180.176.245/goldgym/gold-gym/public/api/getBannerImages
+a. it's use cityadmin function (from commontrait) which is use mst_user table 
+b. it's for banner images Banner Model(banner_table), and mst_user table
+c. in Banner Model function call Allbanners and Allbanners function in Banner Model is use all function which define in Banner Model 
+d. finaly data come from mst_user,banners table
+
+6.http://194.180.176.245/goldgym/gold-gym/public/api/get-articles-category
+a. it's use cityadmin function (from commontrait) which is use mst_user table 
+b. it's use Category Model(categories table) 
+c. it's call Category Model (Article) function
+
+7. http://194.180.176.245/goldgym/gold-gym/public/api/getTrainerBookingOption
+a. it's use cityadmin function (from commontrait) which is use mst_user table 
+b. it's use from User Model relational function(getCenter) and (userInfo) function for get data from relationship
+c. it's use authenticated user (from User Model) use of User Model it also call  a relational function(trainerActivePackage)
+d. trainerActivePackage function is do relation with PurchasePackage(purchase_packages table) for fetch data
+e. it's also use TrainerBooking Model(trainer_bookings table) 
+f. it's call from TrainerBooking Model relational function(trainer) that get data from User Model(mst_user)
+
+8. http://194.180.176.245/goldgym/gold-gym/public/api/getSponseredAdImages
+a. it's use User Model(mst_user table) for get first/ 1 row data
+b. it's alos use SponseredAd Model(sponsered_ads table) for get the data
+
+9. http://194.180.176.245/goldgym/gold-gym/public/api/getDashboardVideo
+a. it's use User Model(mst_user table) for get first/ 1 row data
+b. it's also use Media Model(media table) for get data
+
+10. http://194.180.176.245/goldgym/gold-gym/public/api/upcomingClasses
+a. it's use authenticate user from mst_user
+b. it's use BookedClass Model(booked_classes table) for get data
+c. from BookedClass Model it's class relational function (Slots,getpurchasepackage,attandence,classes) 
+d. these raltinal function use Model(Slots,PurchasePackage,Attandence,Classes and tables(slots,purchasepackages,attandences,classess)) 
+e. use of all of thease get the data 
+
+11. http://194.180.176.245/goldgym/gold-gym/public/api/feedback-popup
+a. it's use Member Model that extend User Model for get data
+b. Member Model Have not self table it's use User Model (mst_user table) for get data
+c. it's call relational function(getUserClubDetail) from Member Model 
+d. in getUserClubhDetail function make a relation from PurchasePackage Model(purchase_packages table) 
+e. it's User Model(mst_user) for get 1 data/row 
+f. It's Also Use Feedback Model(feedback table) for get 1 row data
+
+12. http://194.180.176.245/goldgym/gold-gym/public/api/getCenter
+a. it's call goldGymCenter from (ApiGoldGymCenterTrait)
+b. goldGymCenter function use User Model, there Scope aand relational function 
+c. it's call relational function(trainers,gymTrainers,gymVideo)  from User Model 
+d. the relational function is do relation from GymTrainer,Media(gym_trainers,media table) 
+e. it's take some input in header city,latitude and langitude(if we select address for search center)
+f. all of the above condition it get data
+
+13. http://194.180.176.245/goldgym/gold-gym/public/api/getStaticContent
+a. it's use Content Model (contents table)
+b. it's call Scope function(termcondition,privacypolicy,) from Content Model
+c. it's use WhyGold Model and call a Scope function(gym,studio) from this Model
+d. all of the above condition get data 
+
+14. http://194.180.176.245/goldgym/gold-gym/public/api/getCenterDetails/centerid/centertype
+a.  it's take centerid,centertype and compare them from User Model(mst_user table) column centerid=id and centertype= is_gym,is_studio,is_gymstudio
+b. it call relational function(studioVideo,gymVideo,gymTrainers,studioTrainers) from User Model 
+c. thease relational function do relation with GymTrainer,Media Model(gym_trainers,media table)
+d. it's get one row/data
+
+15. http://194.180.176.245/goldgym/gold-gym/public/api/bookedGymTrialSlot
+a. it's use authenticate user 
+b. it's use BookedClass Model(booked_classes),ClassesPackage(packages table) for get data
+c. It's use PurchasePackage Model for store data if in request book_free_trial value are come
+d. it's call from authenticate user(User Model)(mst_user table) relational function userInfo that call the column gym_trial_package_purchased who store a store a value here
+e. it's also call from Notification Model(purchasePackageNotification)  for give the notification that take argument purchasepackage,user from the function
+
+16. http://194.180.176.245/goldgym/gold-gym/public/api/cancelBookedClass/id
+a. it's call authenticate user
+b. it's use BookedClass Model(booked_classes table) for get one row data
+c. it's use PurchasePackage Model(purchase_packages table) for get on row data
+d. it's also use StudioSlotCancel Model(studio_slot_cancels table) for get data and store data in function
+e. it's use purchase_packages table column studio_used_session for save some value
+f. it's also call userInfo relational function from User Model via auth user and in user_info table column cancel_session_count_for_studio for store value
+g. it's also purchase_packages table column used_studio_cancel_session for store value
+Note : when we cancel the booked classes then also delete the upcomming classes data 
+
+17. http://194.180.176.245/goldgym/gold-gym/public/api/activeGymSubscriptionHistory
+a. it's call authenticate user
+b. it's call relational funtion(allPurchasePackages) from User Model(via auth user) that do relation from PurchasePackage Model and get data use this
+
+18. http://194.180.176.245/goldgym/gold-gym/public/api/getGymSessionHistory?date=2022-10-14&page=1&type=0
+a. it's class authenticate user
+b. it's use BookedClass Model(booked_classes table) for get data
+c. basis of condition return data
+
+19. http://194.180.176.245/goldgym/gold-gym/public/api/getStudioList
+a. it's use getgoldgymstudio function from ApiGoldGymCenterTrait 
+b. it's take city,latitude,langitude in header 
+c. it' User Model for get data and it's call Scope function from User Model
+d. it's call relational function (studioTrainers,studioVideo) these function do relation from(GymTrainer,Media)
+
+20. http://194.180.176.245/goldgym/gold-gym/public/api/getStudioDetails/studioid
+a. it's use User Model for get data data and Call the relational function(studioVideo,gymVideo,gymTrainers,studioTrainers) call one row data
+b. these relation fuction do relation with GymTrainer,Media Model for get 1 row data
+
+21. http://194.180.176.245/goldgym/gold-gym/public/api/v3/getDashboardMoreVideo
+a. it's use User Model for get 1 row data
+b. it's also Use VideoCategory Model (video_categories table) for get data
+
+22. http://194.180.176.245/goldgym/gold-gym/public/api/getAttendanceHistory/year/month
+a.  it's call authenticate user
+b. it's call Attendence Model(attendances table) for get data and call relationship function (center,bookedclass) for get data
+c. center,bookedclass relation function do relation with(User,Classes,BookedClasses)
+d. it's also Call relationship function userInfo(via center function) and use userInfo Model(user_info table) column value
+e. it's also Use Booked Classess Model(booked_classes table) column value 
+
+
+23. http://194.180.176.245/goldgym/gold-gym/public/api/getStudioCategories
+a. it's call authenticated user
+b. it's Call PurchasePackage Model(purchase_packages table) for get 1 row data and relational function(package) from PurchasePackage Model 
+c. in PurchasePackage Model package function do relation with ClassessPacakge Model
+d. it's Use StudioCategorie Model(studio_categories table) and From StudioCategorie Model, call relational function(category) which do relation with Category Model and get 1 row data
+e. it's call getCategoryFromStudioID function from Studio Trait and return data
+
+21. http://194.180.176.245/goldgym/gold-gym/public/api/getStudioClasses
+a. it's use StudioCategorie Model(studioCatories table) for get single row data
+b. it's use StudioClasses Model(studio_classes table) for get data and call relational function (classDetail) for get data
+c. in StudioClasses Model relational function(classDetail) do relation with Classes Model 
+d. and there also using(.) Operator egarloading call the Classes Model Function (classImage) for get data
+e. the classImage relational function Do relation with ClassImage Model  for get data
+d. relation function table is(classes table,class_images) 
+
+22. http://194.180.176.245/goldgym/gold-gym/public/api/getStudioPackage
+a. it's use getPackageForCategory from (StudioTrait) 
+b.  getPackageForCategory function used ClassesPackage Model (packages table)
+
+23.  http://194.180.176.245/goldgym/gold-gym/public/api/logout
+a. it is call authenticated user
+b. it's call removeDeviceDetails function from ApiUserTrait 
+c. removeDeviceDetails function use DeviceDetails Model(device_details table) for delete the device details(it take in header device-id)
+d. it delete authenticate user token
+e. save freshchat_restore_id
+
+24. http://194.180.176.245/goldgym/gold-gym/public/api/login
+a. it's use User Model(mst_user table) and get 1 row data from mst_user table
+b. it's create a token
+c. it's call a function insertDeviceDetails who take argument (token,userid) from ApiUserTrait
+d. insertDeviceDetails function use DeviceDetails Model(device_details table) for store new data via header request
+
+25. http://194.180.176.245/goldgym/gold-gym/public/api/confirmOtp
+a. it's call authenticated user
+b. via authenticated user it's user User Model(mst_user table) and compare the otp and if otp not pass then auto generate the otp and save it mst_user table
+
+26. http://194.180.176.245/goldgym/gold-gym/public/api/user-steps-leaderboard
+a. it's use cityadmin function (from commontrait) which is use mst_user table 
+b. it's use UserStepsHistory Model (user_steps_histories table) for get data
+c. it's call a relationship function(cityGymAdmin) from UserStepsHistory Model for get data
+d. cityGymAdmin relational function do relation with CityGymAdmin Model
+
+27.  http://194.180.176.245/goldgym/gold-gym/public/api/getUserStories
+a.  it's use cityadmin function (from commontrait) which is use mst_user table 
+b. it's also use UserStory Model(user_stories table) for get data
+
+28. http://194.180.176.245/goldgym/gold-gym/public/api/storeUserInfo
+a. it's call authenticated user
+b. it's call setUserInfo function from ApiUserTrait
+c. setUserInfo function use UserInfo Model(user_info table) for get 1 row data and store data and also use UserGoal Model(user_goals table) for get/store data
+d. it's use UserWeightHistory Model(user_weight_histories table) for get and update/store data
+e. it's also use LoyalityPoints Model(loyality_points table) for get 1st row data
+f. it's use UserEventsHistory Model(user_events_history) for get 1st row data
+g. it's call addLeadDetail function from GdmProApiTrait and take argument and this function some data on another api(read in function)
+h. it's also use User Model(mst_user table) get 1st row data 
+i. it's use LeadDetail Model(lead_details table) for store/update data
+j. it's call function (addLeadDetailNotification) from Notification Model(notifications table) which take argument for create/show notification 
+
+29. http://194.180.176.245/goldgym/gold-gym/public/api/gymPackages/gym_id/is_paid/show_package/is_renewable?
+a. it's take some data on api hit time
+b. it's call authenticated user()
+c. it's also call relational function (allPurchasePackages) from auth use who use User Model and this relational function do relation with PurchasePackage Model(purchase_packages table) for check existing
+d. it's also use ClassesPackage Model(packages table) for get data
+
+30. 

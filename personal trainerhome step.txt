@@ -1,0 +1,21 @@
+
+
+1. http://194.180.176.245/goldgym/gold-gym/public/api/getCov19TrainerBookDecl
+a. when i click on personal gym trainer at your home then it show a term a condition then hit api
+
+2. http://194.180.176.245/goldgym/gold-gym/public/api/getHealthGoalList
+a. after check(checkbox) the term&condition first time/when i click on book personal trainer(2nd time click) at your home then it show goal(weightloss,mussulegain) then hit api 
+
+3. http://194.180.176.245/goldgym/gold-gym/public/api/getGymTrainerFreeAndOneDaySlots?date=2022-10-17&day=1&slot_type=1
+a. after select health goal(click on button), it's show (onedaysession,multiplesession,searchbox) when i click onedaysession it's show calender i click a date and time then hit api(it's check slot available or not)(and it's also get the slot hit this api from table)
+
+4.  http://194.180.176.245/goldgym/gold-gym/public/api/getUserAddress
+a. after click on slot date and time it get slot and then next click on book(this button only send control on packages page and here pacakges show)
+b. on packages table show the price and i agree term a condition check(checkbox) 
+c. after cheking term when i click select (in packages) button it's ask for "my home address" and show privious fill address to use and add new address
+
+5.  http://194.180.176.245/goldgym/gold-gym/public/api/storeUserAddress
+a. if i click to fill new home address then hit api for store the address
+
+6. 
+a. after select a address(click on use button) it goto payment page and show pay with and ask for cards/wallet

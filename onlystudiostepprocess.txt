@@ -1,0 +1,42 @@
+
+    //click on Buy  in studio
+1. http://194.180.176.245/goldgym/gold-gym/public/api/getStudioList
+a. when i search the center and goto studio option it's show multiple studio/OR NOT
+
+2. http://194.180.176.245/goldgym/gold-gym/public/api/getStudioDetails/1033(studioid)
+a. when i select a studio then it's show studio detail 
+
+3. http://194.180.176.245/goldgym/gold-gym/public/api/getStudioCategories?studio_id=1033
+a. when i click on buy option after selecting studio
+
+4.  http://194.180.176.245/goldgym/gold-gym/public/api/getStudioPackage?category_id=29
+a. after clicking buy now option it's show categories and i select a category and next hit for pacakges then hit this api 
+
+5.  http://194.180.176.245/goldgym/gold-gym/public/api/storeUserInfo
+a. when i search studio for another location then hit api for store user data(height,weight,city,address,name in userinfo table)
+
+6.
+
+
+
+
+
+//when i Click book_free_trial in studio
+
+1. http://194.180.176.245/goldgym/gold-gym/public/api/getStudioList
+a. when i search the center and goto studio option it's show multiple studio/OR NOT
+
+2. http://194.180.176.245/goldgym/gold-gym/public/api/getStudioDetails/1033(studioid)
+a. when i select a studio then it's show studio detail 
+
+3. http://194.180.176.245/goldgym/gold-gym/public/api/getStudioCategories?studio_id=1033
+a. when i click on buy option after selecting studio
+
+
+4.http://194.180.176.245/goldgym/gold-gym/public/api/getStudioClasses?category_id=32&studio_id=1195
+a. after point 3(when i select category, one select in multiple) then it's hit this api and show classess 
+
+5.  http://194.180.176.245/goldgym/gold-gym/public/api/getstudioslotforbooking?class_id=37&day=2&studio_id=1195&timestamp=1666081140
+a. after 4 point, when i click on a class(book button) then hit api and show calender(slot availability date)/available or not
+
+6. 

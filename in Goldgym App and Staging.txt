@@ -1,0 +1,22 @@
+in Goldgym App and Staging
+
+
+
+1->if we search for gym center then basis of latitute and langitude Goldgym display gym/studio center and we see the gym centers then
+goldgym hit api(getcenter).
+
+Note: when we search center according place search then it hit api(storeUserInfo) which store our location
+
+Note: storing location then getcenter via hit api(getcenter)
+
+2. if we select any gym center then goldgym show gymcenter detailt at this time it hit api(getcenterDetails/centerid/centertype)
+    note:the center_type is from mst_user(is_gym,is_studio,isgymstudio) value check 
+
+3. if we book gym_center(bookedfreetrial) then it hit api(bookedgymtrialslot)
+
+4. if we book session(book session) then it hit api(bookedSession)
+
+5. if we cancel the booked class then it hit api(cancelbookedclass/id) 
+    note: id is come from upcomming class(api) which hit when we booksession because upcomming class also hit when book the trial
+
+6. 

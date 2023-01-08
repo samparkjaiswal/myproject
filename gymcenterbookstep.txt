@@ -1,0 +1,11 @@
+
+1. http://194.180.176.245/goldgym/gold-gym/public/api/getCenter
+a. when i click search for genter then it show gymcenter/not show then hit this api 
+
+2. http://194.180.176.245/goldgym/gold-gym/public/api/getCenterDetails/1143/1(centerid/centertype(type))
+a. when i select a gym center then it's show gymcenter detail
+
+3.http://194.180.176.245/goldgym/gold-gym/public/api/bookedGymTrialSlot 
+a. after select gym center and see gymcenter details when i click on bookSession then select date and book slot then hit api (it's book the slot)
+
+4.

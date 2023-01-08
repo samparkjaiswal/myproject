@@ -1,0 +1,7 @@
+
+
+1. http://194.180.176.245/goldgym/gold-gym/public/api/attendence-detail
+a. when i click on scanner for scan attendance then hit that api
+
+2.http://194.180.176.245/goldgym/gold-gym/public/api/getAttendanceHistory/2022/10
+a. when i click on view attendance 
